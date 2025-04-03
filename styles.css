@@ -247,7 +247,7 @@ footer {
     background-color: #EBE1D8;
     border: 2px solid #000000;
     border-radius: 8px;
-    box-shadow: 12px 12px 0 #000000;
+    box-shadow: -7px 7px 0 #000000;
     overflow: hidden;
 }
 
@@ -306,14 +306,14 @@ footer {
     font-size: 14px;
     font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 12px 12px 0 #000000;
+    box-shadow: -7px 7px 0 #000000;
 }
 
 .qb-button:hover {
     background-color: #EBB436;
     color: #000000;
-    transform: translate(2px, 2px);
-    box-shadow: 10px 10px 0 #000000;
+    transform: translate(-2px, 2px);
+    box-shadow: -5px 5px 0 #000000;
 }
 
 /* Remove old modal styles */
