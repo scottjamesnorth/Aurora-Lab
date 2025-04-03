@@ -35,14 +35,6 @@ nav {
     font-size: 2rem;
     font-weight: 700;
     color: var(--dark-text);
-    display: flex;
-    align-items: center;
-}
-
-.logo::before {
-    content: "◆";
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
 }
 
 .nav-links {
@@ -90,48 +82,15 @@ nav {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
     padding: 4rem;
     min-height: calc(100vh - 100px);
     position: relative;
-    gap: 4rem;
-    overflow: hidden;
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
-    padding-right: 2rem;
-}
-
-.hero-illustration {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 700px;
-    position: relative;
-}
-
-.hero-illustration img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    animation: float 6s ease-in-out infinite;
-    transform-origin: center center;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px) scale(1);
-    }
-    50% {
-        transform: translateY(-20px) scale(1.02);
-    }
-    100% {
-        transform: translateY(0px) scale(1);
-    }
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -275,41 +234,57 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    header {
+        padding: 1.5rem;
     }
-    
+
+    .logo {
+        font-size: 1.75rem;
+    }
+
     .hero {
-        flex-direction: column;
-        padding: 2rem;
-        gap: 3rem;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        padding: 1.5rem;
+        padding-bottom: 3rem;
     }
     
     .hero-content {
-        padding-right: 0;
+        padding: 0 0.5rem;
     }
     
-    .hero-illustration {
-        max-width: 100%;
+    .hero h1 {
+        font-size: 2.75rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    header {
         padding: 1rem;
     }
-    
-    .hero-illustration img {
-        max-width: 90%;
-        margin: 0 auto;
+
+    .logo {
+        font-size: 1.5rem;
     }
-    
-    section {
-        padding: 3rem 1.5rem;
+
+    .hero {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 } 
