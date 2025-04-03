@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--dark-text);
     background: var(--background);
@@ -32,6 +32,7 @@ nav {
 }
 
 .logo {
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: var(--dark-text);
@@ -91,14 +92,16 @@ nav {
 }
 
 .hero h1 {
+    font-family: 'Poppins', sans-serif;
     font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 2rem;
     color: var(--dark-text);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .subtitle {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     color: var(--dark-text);
     opacity: 0.8;
