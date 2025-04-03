@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (qbCloseButton) {
         qbCloseButton.addEventListener('click', () => {
-            qbOverlay.style.display = 'none';
+            sentenceDisplay.textContent = ''; // Clear the display
         });
     }
 }); 
