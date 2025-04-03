@@ -87,9 +87,15 @@ nav {
     padding: 2rem 4rem;
     min-height: calc(100vh - 100px);
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .hero-content {
+    flex: 1;
     max-width: 800px;
 }
 
@@ -234,23 +240,19 @@ footer {
     color: var(--light-text);
 }
 
-/* Modal Styles */
-.modal-overlay {
+/* QB Styles */
+.qb-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 400px;
     z-index: 1000;
+    background-color: transparent;
 }
 
-.modal-container {
-    width: 80%;
-    max-width: 600px;
+.qb-container {
+    width: 100%;
     background-color: #F5F5DC;
     border: 1px solid #000;
     border-radius: 8px;
@@ -258,7 +260,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-top-bar {
+.qb-top-bar {
     background-color: #FFD700;
     height: 40px;
     border-bottom: 1px solid #000;
@@ -269,7 +271,7 @@ footer {
     padding-right: 10px;
 }
 
-.modal-close-button {
+.qb-close-button {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -285,13 +287,13 @@ footer {
     margin: 0;
 }
 
-.modal-content {
+.qb-content {
     padding: 20px;
     min-height: 200px;
     position: relative;
 }
 
-.sentence-display {
+.qb-display {
     font-family: 'Courier New', monospace;
     font-size: 16px;
     line-height: 1.5;
@@ -300,7 +302,7 @@ footer {
     white-space: pre-wrap;
 }
 
-.do-not-press-button {
+.qb-button {
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -314,22 +316,22 @@ footer {
     transition: transform 0.1s ease;
 }
 
-.do-not-press-button:hover {
+.qb-button:hover {
     transform: translateY(-2px);
 }
 
-.do-not-press-button:active {
+.qb-button:active {
     transform: translateY(0);
 }
 
-/* Remove old interactive frame styles */
-.interactive-frame,
-.frame-container,
-.button-container,
-.main-button,
-.clear-button,
-.x-mark,
-.sentence-container {
+/* Remove old modal styles */
+.modal-overlay,
+.modal-container,
+.modal-top-bar,
+.modal-close-button,
+.modal-content,
+.sentence-display,
+.do-not-press-button {
     display: none;
 }
 
@@ -397,5 +399,19 @@ footer {
     .subtitle {
         font-size: 1rem;
         line-height: 1.5;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .qb-overlay {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .hero {
+        flex-direction: column;
     }
 } 

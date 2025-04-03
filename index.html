@@ -30,6 +30,17 @@
                 <p class="subtitle">Our core functions include: generating random API endpoints for existential questions, building virtual garden gnomes with machine learning, and reverse-engineering the sound of one hand clapping. We're also working on a microservice that translates cat memes into binary poetry, and our AI is currently debating the merits of semicolons with a rubber duck.</p>
                 <p class="subtitle">Please leave a message after the beep... or just send us a stack trace of your dreams. We'll get back to you... eventually, after we finish calibrating the flux capacitor. Maybe. Or perhaps we will just start debugging the matrix. Who knows? We are AuroraLab, and we are just as confused as you are.</p>
             </div>
+            <div class="qb-overlay">
+                <div class="qb-container">
+                    <div class="qb-top-bar">
+                        <button class="qb-close-button">×</button>
+                    </div>
+                    <div class="qb-content">
+                        <div id="sentence-display" class="qb-display"></div>
+                        <button id="do-not-press" class="qb-button">Do not press</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="interactive-frame">
@@ -86,14 +97,14 @@
         <p>&copy; 2024 Aurora Lab. All rights reserved.</p>
     </footer>
 
-    <div class="modal-overlay">
-        <div class="modal-container">
-            <div class="modal-top-bar">
-                <button class="modal-close-button">×</button>
+    <div class="qb-overlay">
+        <div class="qb-container">
+            <div class="qb-top-bar">
+                <button class="qb-close-button">×</button>
             </div>
-            <div class="modal-content">
-                <div id="sentence-display" class="sentence-display"></div>
-                <button id="do-not-press" class="do-not-press-button">Do not press</button>
+            <div class="qb-content">
+                <div id="sentence-display" class="qb-display"></div>
+                <button id="do-not-press" class="qb-button">Do not press</button>
             </div>
         </div>
     </div>

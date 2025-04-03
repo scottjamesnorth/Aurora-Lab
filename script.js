@@ -93,18 +93,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let shuffledSentences = shuffleArray([...sentences]);
     let currentIndex = 0;
 
+    // QB functionality
+    const qbOverlay = document.querySelector('.qb-overlay');
+    const qbCloseButton = document.querySelector('.qb-close-button');
     const doNotPressButton = document.getElementById('do-not-press');
-    const clearButton = document.getElementById('clear-button');
     const sentenceDisplay = document.getElementById('sentence-display');
 
-    // Show modal by default
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const modalCloseButton = document.querySelector('.modal-close-button');
-    modalOverlay.style.display = 'flex';
+    // Show QB by default
+    qbOverlay.style.display = 'block';
 
     // Close button functionality
-    modalCloseButton.addEventListener('click', () => {
-        modalOverlay.style.display = 'none';
+    qbCloseButton.addEventListener('click', () => {
+        qbOverlay.style.display = 'none';
     });
 
     // Do not press button functionality
@@ -118,17 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
         sentenceDisplay.textContent = shuffledSentences[currentIndex];
         currentIndex++;
         
+        // Add fade effect
         sentenceDisplay.style.opacity = '0';
         setTimeout(() => {
             sentenceDisplay.style.opacity = '1';
         }, 50);
-    });
-
-    clearButton.addEventListener('click', function() {
-        sentenceDisplay.style.opacity = '0';
-        setTimeout(() => {
-            sentenceDisplay.textContent = '';
-            sentenceDisplay.style.opacity = '1';
-        }, 300);
     });
 }); 
