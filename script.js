@@ -96,37 +96,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // QB functionality
     const qbOverlay = document.querySelector('.qb-overlay');
     const qbCloseButton = document.querySelector('.qb-close-button');
-    const doNotPressButton = document.getElementById('do-not-press');
-    const sentenceDisplay = document.getElementById('sentence-display');
+    const doNotPressButton = document.querySelector('.qb-button');
+    const sentenceDisplay = document.querySelector('.qb-display');
 
     // Show QB by default
     qbOverlay.style.display = 'block';
 
-    // Close button functionality
-    qbCloseButton.addEventListener('click', () => {
-        qbOverlay.style.display = 'none';
-    });
-
-    // Do not press button functionality
-    doNotPressButton.addEventListener('click', function() {
-        console.log('Button clicked'); // Debug log
-        
+    // Function to display next sentence
+    function displayNextSentence() {
         if (currentIndex >= shuffledSentences.length) {
-            // If we've shown all sentences, reshuffle and start over
             shuffledSentences = shuffleArray([...sentences]);
             currentIndex = 0;
         }
-        
-        const nextSentence = shuffledSentences[currentIndex];
-        console.log('Next sentence:', nextSentence); // Debug log
-        
-        sentenceDisplay.textContent = nextSentence;
+        sentenceDisplay.textContent = shuffledSentences[currentIndex];
         currentIndex++;
-        
-        // Add fade effect
-        sentenceDisplay.style.opacity = '0';
-        setTimeout(() => {
-            sentenceDisplay.style.opacity = '1';
-        }, 50);
-    });
+    }
+
+    // Event listeners for QB
+    if (doNotPressButton) {
+        doNotPressButton.addEventListener('click', displayNextSentence);
+    }
+
+    if (qbCloseButton) {
+        qbCloseButton.addEventListener('click', () => {
+            qbOverlay.style.display = 'none';
+        });
+    }
 }); 
