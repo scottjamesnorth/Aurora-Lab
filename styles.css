@@ -234,9 +234,11 @@ footer {
 .qb-overlay {
     position: fixed;
     top: 50%;
-    right: 2rem;
+    right: 0;
     transform: translateY(-50%);
-    width: 400px;
+    width: 300px;
+    margin-right: 2rem;
+    margin-left: 40px;
     z-index: 1000;
     background-color: transparent;
     display: block !important;
