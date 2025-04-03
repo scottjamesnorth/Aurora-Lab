@@ -247,7 +247,7 @@ footer {
     background-color: #EBE1D8;
     border: 2px solid #EBB436;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 12px 12px 0 #000000;
     overflow: hidden;
 }
 
@@ -301,11 +301,14 @@ footer {
     font-family: 'Courier New', monospace;
     font-size: 14px;
     transition: all 0.3s ease;
+    box-shadow: 12px 12px 0 #000000;
 }
 
 .qb-button:hover {
     background-color: #EBB436;
     color: #000000;
+    transform: translate(2px, 2px);
+    box-shadow: 10px 10px 0 #000000;
 }
 
 /* Remove old modal styles */
