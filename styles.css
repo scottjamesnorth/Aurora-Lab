@@ -234,6 +234,77 @@ footer {
     color: var(--light-text);
 }
 
+/* Interactive Frame Styles */
+.interactive-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.frame-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.main-button {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background: #357ABD;
+}
+
+.clear-button {
+    background: #ff4444;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+    background: #cc0000;
+}
+
+.x-mark {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.sentence-container {
+    min-height: 60px;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f5f5f5;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
@@ -262,6 +333,16 @@ footer {
     .subtitle {
         font-size: 1.1rem;
         margin-bottom: 1.25rem;
+    }
+
+    .frame-container {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .main-button {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }
 

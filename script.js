@@ -45,4 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
         
         lastScroll = currentScroll;
     });
+
+    // Temporary array of sentences - to be replaced with your list
+    const sentences = [
+        "Sample sentence 1 - Replace with your actual sentences",
+        "Sample sentence 2 - Replace with your actual sentences",
+        "Sample sentence 3 - Replace with your actual sentences"
+    ];
+
+    const doNotPressButton = document.getElementById('do-not-press');
+    const clearButton = document.getElementById('clear-button');
+    const sentenceDisplay = document.getElementById('sentence-display');
+
+    doNotPressButton.addEventListener('click', function() {
+        const randomIndex = Math.floor(Math.random() * sentences.length);
+        sentenceDisplay.textContent = sentences[randomIndex];
+        sentenceDisplay.style.opacity = '0';
+        setTimeout(() => {
+            sentenceDisplay.style.opacity = '1';
+        }, 50);
+    });
+
+    clearButton.addEventListener('click', function() {
+        sentenceDisplay.style.opacity = '0';
+        setTimeout(() => {
+            sentenceDisplay.textContent = '';
+            sentenceDisplay.style.opacity = '1';
+        }, 300);
+    });
 }); 
