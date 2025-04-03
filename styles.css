@@ -1,6 +1,6 @@
 :root {
     --orange: #ff7f50;
-    --dark-text: #2d3a2d;
+    --dark-text: #000000;
     --background: var(--orange);
 }
 
@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #6FAFCA;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -37,7 +37,7 @@ nav {
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--dark-text);
+    color: #000000;
 }
 
 .nav-links {
@@ -72,7 +72,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dark-text);
+    color: #000000;
     font-weight: 500;
     font-size: 1rem;
     transition: opacity 0.3s ease;
@@ -101,14 +101,14 @@ nav {
     font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 2rem;
-    color: var(--dark-text);
+    color: #000000;
     font-weight: 600;
 }
 
 .subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
-    color: var(--dark-text);
+    color: #000000;
     opacity: 0.8;
     margin-bottom: 1.5rem;
     line-height: 1.6;
@@ -298,6 +298,7 @@ footer {
     margin-bottom: 20px;
     min-height: 150px;
     white-space: pre-wrap;
+    color: #000000;
 }
 
 .qb-button {
