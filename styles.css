@@ -244,22 +244,19 @@ footer {
 
 .qb-container {
     width: 100%;
-    background-color: #F5F5DC;
-    border: 1px solid #000;
+    background-color: #EBE1D8;
+    border: 2px solid #EBB436;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .qb-top-bar {
-    background-color: #FFD700;
-    height: 40px;
-    border-bottom: 1px solid #000;
-    position: relative;
+    background-color: #EBB436;
+    padding: 8px 12px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
+    border-bottom: 2px solid #EBB436;
 }
 
 .qb-close-button {
@@ -295,25 +292,20 @@ footer {
 }
 
 .qb-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    background-color: #EBE1D8;
+    color: #000000;
+    border: 2px solid #EBB436;
     padding: 8px 16px;
-    background-color: #D3D3D3;
-    border: 1px solid #000;
     border-radius: 4px;
-    font-weight: bold;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.1s ease;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .qb-button:hover {
-    transform: translateY(-2px);
-}
-
-.qb-button:active {
-    transform: translateY(0);
+    background-color: #EBB436;
+    color: #000000;
 }
 
 /* Remove old modal styles */
