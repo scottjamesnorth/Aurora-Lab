@@ -289,17 +289,25 @@ footer {
     height: 24px;
     border-radius: 50%;
     border: 2px solid #000000;
-    background-color: #EB6133;
+    background-color: #6FAFCA;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     padding: 0;
     margin: 0;
-    line-height: 1;
+    line-height: 0;
     color: #000000;
+    text-align: center;
+    position: relative;
+    top: -1px;
+}
+
+.qb-close-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
 
 .qb-content {
@@ -395,6 +403,15 @@ footer {
         padding: 1.5rem;
         background-color: #6FAFCA;
     }
+
+    .qb-close-button {
+        font-size: 18px;
+        line-height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2px;
+    }
 }
 
 /* Small mobile devices */
@@ -426,6 +443,12 @@ footer {
     .subtitle {
         font-size: 1rem;
         line-height: 1.5;
+    }
+
+    .qb-close-button {
+        font-size: 18px;
+        line-height: 18px;
+        padding-bottom: 2px;
     }
 }
 
