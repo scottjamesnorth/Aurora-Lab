@@ -95,7 +95,8 @@ nav {
     padding: 4rem;
     min-height: calc(100vh - 100px);
     position: relative;
-    gap: 2rem;
+    gap: 4rem;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -109,24 +110,27 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 600px;
+    max-width: 700px;
+    position: relative;
 }
 
 .hero-illustration img {
     width: 100%;
     height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
     animation: float 6s ease-in-out infinite;
+    transform-origin: center center;
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-20px) scale(1.02);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1);
     }
 }
 
@@ -291,6 +295,7 @@ footer {
     .hero {
         flex-direction: column;
         padding: 2rem;
+        gap: 3rem;
     }
     
     .hero h1 {
@@ -303,6 +308,16 @@ footer {
     
     .hero-content {
         padding-right: 0;
+    }
+    
+    .hero-illustration {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .hero-illustration img {
+        max-width: 90%;
+        margin: 0 auto;
     }
     
     section {
