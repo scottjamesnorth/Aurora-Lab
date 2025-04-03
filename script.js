@@ -109,13 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Do not press button functionality
     doNotPressButton.addEventListener('click', function() {
+        console.log('Button clicked'); // Debug log
+        
         if (currentIndex >= shuffledSentences.length) {
             // If we've shown all sentences, reshuffle and start over
             shuffledSentences = shuffleArray([...sentences]);
             currentIndex = 0;
         }
         
-        sentenceDisplay.textContent = shuffledSentences[currentIndex];
+        const nextSentence = shuffledSentences[currentIndex];
+        console.log('Next sentence:', nextSentence); // Debug log
+        
+        sentenceDisplay.textContent = nextSentence;
         currentIndex++;
         
         // Add fade effect
