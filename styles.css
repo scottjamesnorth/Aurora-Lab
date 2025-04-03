@@ -234,75 +234,103 @@ footer {
     color: var(--light-text);
 }
 
-/* Interactive Frame Styles */
-.interactive-frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.frame-container {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 600px;
-}
-
-.button-container {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-.main-button {
-    background: #4A90E2;
-    color: white;
-    border: none;
-    padding: 12px 24px;
+.modal-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #F5F5DC;
+    border: 1px solid #000;
     border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.main-button:hover {
-    background: #357ABD;
+.modal-top-bar {
+    background-color: #FFD700;
+    height: 40px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
 }
 
-.clear-button {
-    background: #ff4444;
-    color: white;
-    border: none;
-    width: 36px;
-    height: 36px;
+.modal-close-button {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
+    border: 1px solid #000;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
 
-.clear-button:hover {
-    background: #cc0000;
+.modal-content {
+    padding: 20px;
+    min-height: 200px;
+    position: relative;
 }
 
-.x-mark {
-    font-size: 24px;
-    line-height: 1;
+.sentence-display {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 150px;
+    white-space: pre-wrap;
 }
 
+.do-not-press-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: #D3D3D3;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease;
+}
+
+.do-not-press-button:hover {
+    transform: translateY(-2px);
+}
+
+.do-not-press-button:active {
+    transform: translateY(0);
+}
+
+/* Remove old interactive frame styles */
+.interactive-frame,
+.frame-container,
+.button-container,
+.main-button,
+.clear-button,
+.x-mark,
 .sentence-container {
-    min-height: 60px;
-    padding: 1rem;
-    border-radius: 8px;
-    background: #f5f5f5;
-    font-size: 1.1rem;
-    line-height: 1.4;
+    display: none;
 }
 
 /* Responsive Design */

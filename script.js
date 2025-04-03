@@ -97,6 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearButton = document.getElementById('clear-button');
     const sentenceDisplay = document.getElementById('sentence-display');
 
+    // Show modal by default
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalCloseButton = document.querySelector('.modal-close-button');
+    modalOverlay.style.display = 'flex';
+
+    // Close button functionality
+    modalCloseButton.addEventListener('click', () => {
+        modalOverlay.style.display = 'none';
+    });
+
+    // Do not press button functionality
     doNotPressButton.addEventListener('click', function() {
         if (currentIndex >= shuffledSentences.length) {
             // If we've shown all sentences, reshuffle and start over
