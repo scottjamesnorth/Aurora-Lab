@@ -95,11 +95,39 @@ nav {
     padding: 4rem;
     min-height: calc(100vh - 100px);
     position: relative;
+    gap: 2rem;
 }
 
 .hero-content {
+    flex: 1;
     max-width: 600px;
     padding-right: 2rem;
+}
+
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+.hero-illustration img {
+    width: 100%;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .hero h1 {
